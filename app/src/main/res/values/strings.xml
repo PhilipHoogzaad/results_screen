@@ -1,0 +1,37 @@
+<resources>
+	<string name="app_name">RecyclerView</string>
+
+	<string-array name="kapperNaam">
+		<item>Schaar \'t Haar</item>
+		<item>Hair Yo!</item>
+		<item>Snip Snip</item>
+		<item>Knip Klaar!</item>
+		<item>Mannen met Baarden</item>
+		<item>Verf en Style</item>
+	</string-array>
+
+	<string-array name="slogan">
+		<item>Kinderen onder 8 jaar GRATIS</item>
+		<item>Moderne kapsels voor iedereen</item>
+		<item>Kom gezellig langs</item>
+		<item>Voor een Snelle Tuneup</item>
+		<item>For all things Facial</item>
+		<item>Kom bij Fleur voor \'n nieuwe Kleur</item>
+	</string-array>
+
+	<string-array name="beschrijving">
+		<item>Dames en Herenkapper centrale ligging Utrecht.
+				Kinderen tot 8 jaar worden bij ons gratis geknipt.
+				Dus neem de kleintjes gerust mee!</item>
+		<item>Wilt u een modern kapsel? Kom bij ons! Weet u het al? Dan kan dat natuurlijk ook.</item>
+		<item>Gezellige kapper nabij Amsterdam, komt u ook?</item>
+		<item>Een kappersbezoek hoeft niet te veranderen in een dagje uit.
+				Wij staan klaar u te helpen zodat u snel verder kan met uw dag.</item>
+		<item>Knippen, wassen, verven, vlechten. Je kan het zo raar niet bedenken,
+				of wij kunnen het met uw gezichtshaar! Moet u nog even wachten,
+				neem gerust een kop koffie in onze lounch.</item>
+		<item>Bent u toe aan een nieuwe stijl? Kom gezellig bij ons binnen om te browsen of
+				om een van onze experts raad te plegen.</item>
+	</string-array>
+
+</resources>
