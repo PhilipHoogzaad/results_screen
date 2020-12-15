@@ -7,7 +7,7 @@
 	tools:context=".KapperInfo">
 
 	<ImageView
-		android:id="@+id/mainImageView"
+		android:id="@+id/kapperImg"
 		android:layout_width="100dp"
 		android:layout_height="100dp"
 		android:layout_marginStart="8dp"
@@ -18,32 +18,32 @@
 		tools:srcCompat="@tools:sample/avatars" />
 
 	<TextView
-		android:id="@+id/title"
+		android:id="@+id/kapperNaam"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="8dp"
 		android:layout_marginLeft="8dp"
 		android:layout_marginTop="8dp"
-		android:text="Title"
+		android:text="TextView"
 		android:textSize="24sp"
 		android:textStyle="bold"
-		app:layout_constraintStart_toEndOf="@+id/mainImageView"
+		app:layout_constraintStart_toEndOf="@+id/kapperImg"
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<TextView
-		android:id="@+id/description"
+		android:id="@+id/slogan"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="8dp"
 		android:layout_marginLeft="8dp"
 		android:layout_marginTop="8dp"
-		android:text="Description"
+		android:text="TextView"
 		android:textSize="16sp"
-		app:layout_constraintStart_toEndOf="@+id/mainImageView"
-		app:layout_constraintTop_toBottomOf="@+id/title" />
+		app:layout_constraintStart_toEndOf="@+id/kapperImg"
+		app:layout_constraintTop_toBottomOf="@+id/kapperNaam" />
 
 	<TextView
-		android:id="@+id/textView3"
+		android:id="@+id/static_Beschrijving"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="16dp"
@@ -52,5 +52,15 @@
 		android:textStyle="bold"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/mainImageView" />
+		app:layout_constraintTop_toBottomOf="@+id/kapperImg" />
+
+	<TextView
+		android:id="@+id/txt1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="16sp"
+		android:text="TextView"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/static_Beschrijving" />
 </androidx.constraintlayout.widget.ConstraintLayout>
