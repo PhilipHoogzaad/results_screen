@@ -24,6 +24,7 @@
 				android:id="@+id/kapperImg"
 				android:layout_width="100dp"
 				android:layout_height="100dp"
+				android:contentDescription="@string/kapper_afbeelding"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
 				tools:srcCompat="@tools:sample/avatars" />
@@ -34,7 +35,7 @@
 				android:layout_height="wrap_content"
 				android:layout_marginStart="16dp"
 				android:layout_marginLeft="16dp"
-				android:layout_marginTop="8dp"
+				android:layout_marginTop="4dp"
 				android:text="TextView"
 				android:textSize="24sp"
 				android:textStyle="bold"
@@ -47,11 +48,74 @@
 				android:layout_height="wrap_content"
 				android:layout_marginStart="16dp"
 				android:layout_marginLeft="16dp"
-				android:layout_marginTop="8dp"
+				android:layout_marginTop="4dp"
 				android:text="TextView"
 				android:textSize="16sp"
 				app:layout_constraintStart_toEndOf="@+id/kapperImg"
 				app:layout_constraintTop_toBottomOf="@+id/kapperNaam" />
+
+			<ImageView
+				android:id="@+id/starOn1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="16dp"
+				android:layout_marginLeft="16dp"
+				android:layout_marginTop="4dp"
+				android:contentDescription="@string/rating_s1"
+				app:layout_constraintStart_toEndOf="@+id/kapperImg"
+				app:layout_constraintTop_toBottomOf="@+id/slogan"
+				app:srcCompat="@android:drawable/btn_star_big_on" />
+
+			<ImageView
+				android:id="@+id/starOn2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:contentDescription="@string/rating_s2"
+				app:layout_constraintStart_toEndOf="@+id/starOn1"
+				app:layout_constraintTop_toBottomOf="@+id/slogan"
+				app:srcCompat="@android:drawable/btn_star_big_on" />
+
+			<ImageView
+				android:id="@+id/starOn3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:contentDescription="@string/rating_s3"
+				app:layout_constraintStart_toEndOf="@+id/starOn2"
+				app:layout_constraintTop_toBottomOf="@+id/slogan"
+				app:srcCompat="@android:drawable/btn_star_big_on" />
+
+			<ImageView
+				android:id="@+id/starOff1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:contentDescription="@string/rating_s4"
+				app:layout_constraintStart_toEndOf="@+id/starOn3"
+				app:layout_constraintTop_toBottomOf="@+id/slogan"
+				app:srcCompat="@android:drawable/btn_star_big_off" />
+
+			<ImageView
+				android:id="@+id/starOff2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:contentDescription="@string/rating_s5"
+				app:layout_constraintStart_toEndOf="@+id/starOff1"
+				app:layout_constraintTop_toBottomOf="@+id/slogan"
+				app:srcCompat="@android:drawable/btn_star_big_off" />
+
+			<TextView
+				android:id="@+id/rating"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="16dp"
+				android:layout_marginLeft="16dp"
+				android:text="@string/kapperRating"
+				app:layout_constraintBottom_toBottomOf="@+id/starOff2"
+				app:layout_constraintStart_toEndOf="@+id/starOff2"
+				app:layout_constraintTop_toTopOf="@+id/starOff2" />
 
 
 		</androidx.constraintlayout.widget.ConstraintLayout>

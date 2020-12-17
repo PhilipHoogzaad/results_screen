@@ -7,12 +7,81 @@
 	tools:context=".KapperInfo">
 
 	<ImageView
+		android:id="@+id/starOff2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s5"
+		app:layout_constraintStart_toEndOf="@+id/starOff1"
+		app:layout_constraintTop_toBottomOf="@+id/slogan"
+		app:srcCompat="@android:drawable/btn_star_big_off" />
+
+	<ImageView
+		android:id="@+id/starOn1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginLeft="16dp"
+		android:layout_marginTop="4dp"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s1"
+		app:layout_constraintStart_toEndOf="@+id/kapperImg"
+		app:layout_constraintTop_toBottomOf="@+id/slogan"
+		app:srcCompat="@android:drawable/btn_star_big_on" />
+
+	<ImageView
+		android:id="@+id/starOn2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s2"
+		app:layout_constraintStart_toEndOf="@+id/starOn1"
+		app:layout_constraintTop_toBottomOf="@+id/slogan"
+		app:srcCompat="@android:drawable/btn_star_big_on" />
+
+	<ImageView
+		android:id="@+id/starOn3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s3"
+		app:layout_constraintStart_toEndOf="@+id/starOn2"
+		app:layout_constraintTop_toBottomOf="@+id/slogan"
+		app:srcCompat="@android:drawable/btn_star_big_on" />
+
+	<ImageView
+		android:id="@+id/starOff1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="4dp"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s4"
+		app:layout_constraintStart_toEndOf="@+id/starOn3"
+		app:layout_constraintTop_toBottomOf="@+id/slogan"
+		app:srcCompat="@android:drawable/btn_star_big_off" />
+
+	<TextView
+		android:id="@+id/rating"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginLeft="16dp"
+		android:text="@string/kapperRating"
+		app:layout_constraintBottom_toBottomOf="@+id/starOff2"
+		app:layout_constraintStart_toEndOf="@+id/starOff2"
+		app:layout_constraintTop_toTopOf="@+id/starOff2" />
+
+	<ImageView
 		android:id="@+id/kapperImg"
 		android:layout_width="100dp"
 		android:layout_height="100dp"
 		android:layout_marginStart="8dp"
 		android:layout_marginLeft="8dp"
 		android:layout_marginTop="8dp"
+		android:contentDescription="@string/kapper_afbeelding"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		tools:srcCompat="@tools:sample/avatars" />
@@ -21,9 +90,9 @@
 		android:id="@+id/kapperNaam"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="8dp"
-		android:layout_marginLeft="8dp"
-		android:layout_marginTop="8dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginLeft="16dp"
+		android:layout_marginTop="4dp"
 		android:text="TextView"
 		android:textSize="24sp"
 		android:textStyle="bold"
@@ -34,33 +103,446 @@
 		android:id="@+id/slogan"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_marginStart="8dp"
-		android:layout_marginLeft="8dp"
-		android:layout_marginTop="8dp"
+		android:layout_marginStart="16dp"
+		android:layout_marginLeft="16dp"
+		android:layout_marginTop="4dp"
 		android:text="TextView"
 		android:textSize="16sp"
 		app:layout_constraintStart_toEndOf="@+id/kapperImg"
 		app:layout_constraintTop_toBottomOf="@+id/kapperNaam" />
 
-	<TextView
-		android:id="@+id/static_Beschrijving"
-		android:layout_width="wrap_content"
+	<androidx.cardview.widget.CardView
+		android:id="@+id/afspraak_button"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="16dp"
-		android:text="Beschrijving"
-		android:textSize="24sp"
-		android:textStyle="bold"
+		android:layout_marginTop="8dp"
+		android:clickable="true"
+		app:cardBackgroundColor="#909AD3"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/kapperImg" />
+		app:layout_constraintTop_toBottomOf="@+id/kapperImg">
 
-	<TextView
-		android:id="@+id/txt1"
-		android:layout_width="wrap_content"
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<ImageView
+				android:id="@+id/kalenderButton"
+				android:layout_width="45dp"
+				android:layout_height="45dp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.15"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+			<TextView
+				android:id="@+id/static_KalenderText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/static_AfspraakText"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toBottomOf="@+id/kalenderButton"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/kalenderButton"
+				app:layout_constraintTop_toTopOf="@+id/kalenderButton"
+				app:layout_constraintVertical_bias="0.507" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.cardview.widget.CardView>
+
+	<androidx.core.widget.NestedScrollView
+		android:id="@+id/nestedScrollView"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="16sp"
-		android:text="TextView"
-		app:layout_constraintEnd_toEndOf="parent"
+		android:layout_marginTop="8dp"
+		app:layout_constraintEnd_toStartOf="@+id/afspraak_button"
+		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/static_Beschrijving" />
+		app:layout_constraintTop_toBottomOf="@+id/afspraak_button">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingBottom="200dp">
+
+			<TextView
+				android:id="@+id/static_overOns"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="8dp"
+				android:background="#909AD3"
+				android:gravity="center"
+				android:text="@string/static_Beschrijving"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/overOns"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:paddingHorizontal="10sp"
+				android:text="@string/Beschrijving"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/static_overOns" />
+
+			<TextView
+				android:id="@+id/static_TariefText"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="16dp"
+				android:background="#909AD3"
+				android:gravity="center"
+				android:text="@string/static_tarieflijst"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/overOns" />
+
+			<TextView
+				android:id="@+id/static_TL_Items"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Behandeling"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toStartOf="@+id/static_TL_ItemPrijs"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/static_TariefText" />
+
+			<TextView
+				android:id="@+id/static_TL_ItemPrijs"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="Prijs"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/static_TariefText" />
+
+			<TextView
+				android:id="@+id/static_TL_PrijsKind"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="t/m 17 jaar"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/static_TL_ItemPrijs"
+				app:layout_constraintTop_toBottomOf="@+id/static_TariefText" />
+
+			<TextView
+				android:id="@+id/item1"
+				android:layout_width="wrap_content"
+				android:layout_height="36dp"
+				android:layout_marginStart="8dp"
+				android:layout_marginLeft="8dp"
+				android:layout_marginTop="8dp"
+				android:text="Knippen - Kort Kapsel"
+				android:textSize="16sp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/static_TL_Items" />
+
+			<TextView
+				android:id="@+id/prijs1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="32dp"
+				android:layout_marginLeft="32dp"
+				android:layout_marginTop="8dp"
+				android:text="€ 15,-"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="@+id/static_TL_ItemPrijs"
+				app:layout_constraintStart_toEndOf="@+id/item1"
+				app:layout_constraintTop_toBottomOf="@+id/static_TL_ItemPrijs" />
+
+			<TextView
+				android:id="@+id/prijs1_kind"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="€ 8,-"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="@+id/static_TL_PrijsKind"
+				app:layout_constraintStart_toStartOf="@+id/static_TL_PrijsKind"
+				app:layout_constraintTop_toBottomOf="@+id/static_TL_PrijsKind" />
+
+			<TextView
+				android:id="@+id/item2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="Knippen - Lang Kapsel"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toStartOf="@+id/prijs2"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="@+id/item1"
+				app:layout_constraintTop_toBottomOf="@+id/item1" />
+
+			<TextView
+				android:id="@+id/prijs2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="€ 25,-"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="@+id/prijs1"
+				app:layout_constraintStart_toStartOf="@+id/prijs1"
+				app:layout_constraintTop_toBottomOf="@+id/prijs1" />
+
+			<TextView
+				android:id="@+id/prijs2_kind"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="€ 15,-"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="@+id/static_TL_PrijsKind"
+				app:layout_constraintStart_toStartOf="@+id/static_TL_PrijsKind"
+				app:layout_constraintTop_toBottomOf="@+id/prijs1_kind" />
+
+			<TextView
+				android:id="@+id/item3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="Wassen"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toStartOf="@+id/prijs3"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="@+id/item2"
+				app:layout_constraintTop_toBottomOf="@+id/item2" />
+
+			<TextView
+				android:id="@+id/prijs3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="€ 10,-"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="@+id/prijs2"
+				app:layout_constraintStart_toStartOf="@+id/prijs2"
+				app:layout_constraintTop_toBottomOf="@+id/prijs2" />
+
+			<TextView
+				android:id="@+id/prijs3_kind"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="€ 10,-"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="@+id/static_TL_PrijsKind"
+				app:layout_constraintStart_toStartOf="@+id/static_TL_PrijsKind"
+				app:layout_constraintTop_toBottomOf="@+id/prijs2_kind" />
+
+			<TextView
+				android:id="@+id/item4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="Baard Knippen"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toStartOf="@+id/prijs4"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="@+id/item3"
+				app:layout_constraintTop_toBottomOf="@+id/item3" />
+
+			<TextView
+				android:id="@+id/prijs4"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="€ 15,-"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="@+id/prijs3"
+				app:layout_constraintStart_toStartOf="@+id/prijs3"
+				app:layout_constraintTop_toBottomOf="@+id/prijs3" />
+
+			<TextView
+				android:id="@+id/item5"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="Scheren"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toStartOf="@+id/prijs5"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="@+id/item4"
+				app:layout_constraintTop_toBottomOf="@+id/item4" />
+
+			<TextView
+				android:id="@+id/prijs5"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="€ 25,-"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="@+id/prijs4"
+				app:layout_constraintStart_toStartOf="@+id/prijs4"
+				app:layout_constraintTop_toBottomOf="@+id/prijs4" />
+
+			<TextView
+				android:id="@+id/static_OpeningsTijden"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="16dp"
+				android:background="#909AD3"
+				android:gravity="center"
+				android:text="Openingstijden"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/item5" />
+
+			<TextView
+				android:id="@+id/static_werkweek"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="32dp"
+				android:layout_marginLeft="32dp"
+				android:layout_marginTop="16dp"
+				android:text="Ma t/m Vr"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/static_OpeningsTijden" />
+
+			<TextView
+				android:id="@+id/koopavond"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="32dp"
+				android:layout_marginLeft="32dp"
+				android:layout_marginTop="8dp"
+				android:text="Vr koopavond"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/static_werkweek" />
+
+			<TextView
+				android:id="@+id/za"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="32dp"
+				android:layout_marginLeft="32dp"
+				android:layout_marginTop="8dp"
+				android:text="Za"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/koopavond" />
+
+			<TextView
+				android:id="@+id/tijdWerkweek"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="0900 - 1200  |  1230 - 1730"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/static_werkweek"
+				app:layout_constraintTop_toBottomOf="@+id/static_OpeningsTijden" />
+
+			<TextView
+				android:id="@+id/tijdKoopavond"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:text="1800 - 2100"
+				app:layout_constraintEnd_toEndOf="@+id/tijdWerkweek"
+				app:layout_constraintStart_toStartOf="@+id/tijdWerkweek"
+				app:layout_constraintTop_toBottomOf="@+id/tijdWerkweek" />
+
+			<TextView
+				android:id="@+id/tijdZa"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="Enkel op Afspraak"
+				app:layout_constraintEnd_toEndOf="@+id/tijdWerkweek"
+				app:layout_constraintStart_toStartOf="@+id/tijdWerkweek"
+				app:layout_constraintTop_toBottomOf="@+id/tijdKoopavond" />
+
+			<TextView
+				android:id="@+id/static_OverigeInfo"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="16dp"
+				android:background="#909AD3"
+				android:gravity="center"
+				android:text="@string/static_OverigeInfo"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.0"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/tijdZa" />
+
+			<TextView
+				android:id="@+id/adres"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="16dp"
+				android:text="LangeJanWeg 732 B, 1234AB, Utrecht"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/static_OverigeInfo" />
+
+			<TextView
+				android:id="@+id/contact"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="T: 0800-12 1234  |  E: dynamickapper@info.nl"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/adres" />
+
+			<TextView
+				android:id="@+id/kvk_Btw"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:text="KVK: 12345678 | BTW: NL12345A123B12"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/contact" />
+
+			<TextView
+				android:id="@+id/copyright"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="32dp"
+				android:text="© Copyright 2020 DynamicKapper"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/kvk_Btw" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
