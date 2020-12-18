@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/mainBackgroundColor"
+	tools:context=".AfspraakMaken">
+
+	<TextView
+		android:id="@+id/static_PlanAfspraak"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="16dp"
+		android:background="@color/mainFieldColor"
+		android:gravity="center"
+		android:text="@string/static_PlanAfspraak"
+		android:textColor="@color/mainTextColor"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/static_Kalender"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="16dp"
+		android:background="@color/mainFieldColor"
+		android:gravity="center"
+		android:text="@string/static_kalender"
+		android:textColor="@color/mainTextColor"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/KapperCard" />
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/KapperCard"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="16dp"
+		android:background="@color/mainBackgroundColor"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/static_PlanAfspraak">
+
+		<ImageView
+			android:id="@+id/kapperImg"
+			android:layout_width="100dp"
+			android:layout_height="100dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginLeft="8dp"
+			android:contentDescription="@string/static_kapper_afbeelding"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			tools:srcCompat="@tools:sample/avatars" />
+
+		<TextView
+			android:id="@+id/kapperNaam"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="16dp"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="4dp"
+			android:text="@string/dynamic_kapperNaam"
+			android:textColor="@color/mainTextColor"
+			android:textSize="24sp"
+			android:textStyle="bold"
+			app:layout_constraintStart_toEndOf="@+id/kapperImg"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/slogan"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="16dp"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="4dp"
+			android:text="@string/dynamic_slogan"
+			android:textColor="@color/mainTextColor"
+			android:textSize="16sp"
+			app:layout_constraintStart_toEndOf="@+id/kapperImg"
+			app:layout_constraintTop_toBottomOf="@+id/kapperNaam" />
+
+		<ImageView
+			android:id="@+id/starOn1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="16dp"
+			android:layout_marginLeft="16dp"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/rating_s1"
+			app:layout_constraintStart_toEndOf="@+id/kapperImg"
+			app:layout_constraintTop_toBottomOf="@+id/slogan"
+			app:srcCompat="@android:drawable/btn_star_big_on" />
+
+		<ImageView
+			android:id="@+id/starOn2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/rating_s2"
+			app:layout_constraintStart_toEndOf="@+id/starOn1"
+			app:layout_constraintTop_toBottomOf="@+id/slogan"
+			app:srcCompat="@android:drawable/btn_star_big_on" />
+
+		<ImageView
+			android:id="@+id/starOn3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/rating_s3"
+			app:layout_constraintStart_toEndOf="@+id/starOn2"
+			app:layout_constraintTop_toBottomOf="@+id/slogan"
+			app:srcCompat="@android:drawable/btn_star_big_on" />
+
+		<ImageView
+			android:id="@+id/starOff1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/rating_s4"
+			app:layout_constraintStart_toEndOf="@+id/starOn3"
+			app:layout_constraintTop_toBottomOf="@+id/slogan"
+			app:srcCompat="@android:drawable/btn_star_big_off" />
+
+		<ImageView
+			android:id="@+id/starOff2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="4dp"
+			android:contentDescription="@string/rating_s5"
+			app:layout_constraintStart_toEndOf="@+id/starOff1"
+			app:layout_constraintTop_toBottomOf="@+id/slogan"
+			app:srcCompat="@android:drawable/btn_star_big_off" />
+
+		<TextView
+			android:id="@+id/rating"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="16dp"
+			android:layout_marginLeft="16dp"
+			android:text="@string/kapperRating"
+			android:textColor="@color/mainTextColor"
+			app:layout_constraintBottom_toBottomOf="@+id/starOff2"
+			app:layout_constraintStart_toEndOf="@+id/starOff2"
+			app:layout_constraintTop_toTopOf="@+id/starOff2" />
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+	<ImageView
+		android:id="@+id/kalenderPlaceholder"
+		android:layout_width="200dp"
+		android:layout_height="200dp"
+		android:layout_marginTop="32dp"
+		android:contentDescription="@string/placeholder_kalender_buttontext"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/static_Kalender"
+		app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/AfBeheer_bt"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/kalenderPlaceholder">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/mainFieldColor">
+
+			<ImageView
+				android:id="@+id/kalenderButton"
+				android:layout_width="45dp"
+				android:layout_height="45dp"
+				android:contentDescription="@string/static_kalender_button_afbeelding"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="0.15"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+			<TextView
+				android:id="@+id/static_BeheerText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/static_beheer_buttontext"
+				android:textColor="@color/mainTextColor"
+				android:textSize="16sp"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toBottomOf="@+id/kalenderButton"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/kalenderButton"
+				app:layout_constraintTop_toTopOf="@+id/kalenderButton"
+				app:layout_constraintVertical_bias="0.507" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+	</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

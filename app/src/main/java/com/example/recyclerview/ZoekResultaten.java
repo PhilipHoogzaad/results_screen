@@ -7,17 +7,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 
-public class MainActivity extends AppCompatActivity {
+public class ZoekResultaten extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
     String[] s1, s2;
-    int[] images = {R.drawable.kapper1, R.drawable.kapper2, R.drawable.kapper3, R.drawable.kapper4, R.drawable.kapper5, R.drawable.kapper6};
+    int[] images = {R.drawable.kapper1, R.drawable.kapper2, R.drawable.kapper3, R.drawable.kapper4, R.drawable.kapper5, R.drawable.kapper6, R.drawable.kapper7};
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_zoekresultaten);
 
         recyclerView = findViewById(R.id.recyclerView);
 

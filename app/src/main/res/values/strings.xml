@@ -1,60 +1,135 @@
 <resources>
 	<string name="app_name">RecyclerView</string>
 
-	<string name="static_Beschrijving">Over Ons</string>
-	<string name="Beschrijving">Is het tijd voor een knipbeurt? Bij ons kunt u terecht.
-		Als u op een vast tijdstip geholpen wil worden raden wij u aan een afspraak te maken via deze app.
-		</string>
+<!-- STATIC TEXT -->
 
-	<string name="kapper_afbeelding">Kapper Afbeelding</string>
+		<!-- KAPPER INFO -->
 
-	<string name="kapperRating">(209)</string>
-	<string name="rating_s1">rating_S1</string>
-	<string name="rating_s2">rating_S2</string>
-	<string name="rating_s3">rating_S3</string>
-	<string name="rating_s4">rating_S4</string>
-	<string name="rating_s5">rating_S5</string>
+				<string name="static_kapper_afbeelding">Kapper Afbeelding</string>
+				<string name="static_Beschrijving">Over Ons</string>
+				<string name="static_AfspraakText">Maak een Afspraak</string>
 
-	<string name="kalender_button">kalender</string>
-	<string name="static_AfspraakText">Maak een afspraak</string>
+				<!-- Kapper Beoordeling -->
+				<string name="kapperRating">(209)</string>
+				<string name="rating_s1">rating_S1</string>
+				<string name="rating_s2">rating_S2</string>
+				<string name="rating_s3">rating_S3</string>
+				<string name="rating_s4">rating_S4</string>
+				<string name="rating_s5">rating_S5</string>
 
-	<string name="static_tarieflijst">Tarieflijst</string>
-	<string name="static_TariefTest">TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextView TextViewTextTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewTextViewText ViewTextViewView</string>
-	<string name="col1">Behandeling</string>
-	<string name="col2">Prijs</string>
-	<string name="static_OverigeInfo">Overige Informatie</string>
+				<!-- Tarieflijst -->
+				<string name="static_tarieflijst">Tarieflijst</string>
+				<string name="col1">Behandeling</string>
+				<string name="col2">Prijs</string>
 
-	<string-array name="kapperNaam">
-		<item>Schaar \'t Haar</item>
-		<item>Hair Yo!</item>
-		<item>Snip Snip</item>
-		<item>Knip Klaar!</item>
-		<item>Mannen met Baarden</item>
-		<item>Verf en Style</item>
-	</string-array>
+				<!-- Openingstijden -->
+				<string name="static_openingstijden">Openingstijden</string>
 
-	<string-array name="slogan">
-		<item>Kinderen onder 8 jaar GRATIS</item>
-		<item>Moderne kapsels voor iedereen</item>
-		<item>Kom gezellig langs</item>
-		<item>Voor een Snelle Tuneup</item>
-		<item>For all things Facial</item>
-		<item>Kom bij Fleur voor \'n nieuwe Kleur</item>
-	</string-array>
+				<!-- Overige Informatie -->
+				<string name="static_OverigeInfo">Overige Informatie</string>
+				<string name="static_copyright">© Copyright 2020 KapperGezocht</string>
 
-	<string-array name="kapperBeschrijving">
-		<item>Dames en Herenkapper centrale ligging Utrecht.
-				Kinderen tot 8 jaar worden bij ons gratis geknipt.
-				Dus neem de kleintjes gerust mee!</item>
-		<item>Wilt u een modern kapsel? Kom bij ons! Weet u het al? Dan kan dat natuurlijk ook.</item>
-		<item>Gezellige kapper nabij Amsterdam, komt u ook?</item>
-		<item>Een kappersbezoek hoeft niet te veranderen in een dagje uit.
-				Wij staan klaar u te helpen zodat u snel verder kan met uw dag.</item>
-		<item>Knippen, wassen, verven, vlechten. Je kan het zo raar niet bedenken,
-				of wij kunnen het met uw gezichtshaar! Moet u nog even wachten,
-				neem gerust een kop koffie in onze lounch.</item>
-		<item>Bent u toe aan een nieuwe stijl? Kom gezellig bij ons binnen om te browsen of
-				om een van onze experts raad te plegen.</item>
-	</string-array>
+
+		<!-- AFSPRAAK MAKEN -->
+
+				<string name="static_PlanAfspraak">Plan hier uw nieuwe afspraak</string>
+				<string name="static_kalender">Kalender</string>
+				<string name="static_beheer_buttontext">Beheer uw Afspraken</string>
+				<string name="placeholder_kalender_buttontext">kalenderbutton</string>
+				<string name="static_kalender_button_afbeelding">kalenderlogo</string>
+
+		<!-- AFSPRAKEN BEHEREN -->
+
+				<string name="static_GemaaktAfsp">Gemaakte Afspraken</string>
+				<string name="static_afspraak_column1">Afspraak #</string>
+				<string name="static_afspraak_column2">Datum</string>
+				<string name="static_afspraak_column3">Tijd</string>
+				<string name="static_afspraak_column4">Aantal Pers.</string>
+
+
+
+	<!-- DYNAMIC TEXT -->
+
+		<!-- Kapper Informatie -->
+				<string name="dynamic_kapperNaam">Kapper Naam</string>
+				<string name="dynamic_slogan">Kapper Slogan</string>
+				<string name="dynamicbeschrijving">DynamicBeschrijving</string>
+
+				<!-- Tarieflijst -->
+				<string name="Column1_behandeling">Behandeling</string>
+				<string name="Column2_prijs">Prijs</string>
+				<string name="Column3_actie">t/m 17 jaar</string>
+				<string name="dynamic_item1">Knippen - Kort Kapsel</string>
+				<string name="dynamic_item1_prijs1">€ 15,-</string>
+				<string name="dynamic_item1_prijs2">€ 8,-</string>
+				<string name="dynamic_item2">Knippen - Lang Kapsel</string>
+				<string name="dynamic_item2_prijs1">€ 25,-</string>
+				<string name="dynamic_item2_prijs2">€ 15,-</string>
+				<string name="dynamic_item3">Wassen</string>
+				<string name="dynamic_item3_prijs1">€ 10,-</string>
+				<string name="dynamic_item3_prijs2">€ 10,-</string>
+				<string name="dynamic_item4">Baard Knippen</string>
+				<string name="dynamic_item4_prijs1">€ 15,-</string>
+				<string name="dynamic_item5">Scheren</string>
+				<string name="dynamic_item5_prijs1">€ 25,-</string>
+
+				<!-- Openings Tijden -->
+				<string name="dynamic_week">Ma t/m Vr</string>
+				<string name="dynamic_week_extra">Vr koopavond</string>
+				<string name="dynamic_week_extra2">Za</string>
+				<string name="dynamic_tijden1">0900 – 1200 | 1230 – 1730</string>
+				<string name="dynamic_tijden2">1800 – 2100</string>
+				<string name="dynamic_tijden3">Enkel op Afspraak</string>
+
+				<!-- Overige Informatie -->
+				<string name="dynamic_address">LangeJanWeg 732 B, 1234AB, Utrecht</string>
+				<string name="dynamic_contact">T: 0800–12 1234 | E: dynamickapper@info.nl</string>
+				<string name="dynamic_btw">KVK: 12345678 | BTW: NL12345A123B12</string>
+				<string name="afspraak_id_1">1</string>
+				<string name="afspraak_id_2">2</string>
+				<string name="afspraak_dt_1">18-12-2020</string>
+				<string name="afspraak_dt_2">10-01-2021</string>
+				<string name="afspraak_td_1">16:00</string>
+				<string name="afspraak_td_2">11:00</string>
+				<string name="afspraak_ps_1">2</string>
+				<string name="afspraak_ps_2">2</string>
+
+
+		<!-- DYNAMIC STRING ARRAYS -->
+				<string-array name="kapperNaam">
+					<item>Schaar \'t Haar</item>
+					<item>Hair Yo!</item>
+					<item>Snip Snip</item>
+					<item>Knip Klaar!</item>
+					<item>Mannen met Baarden</item>
+					<item>Verf en Style</item>
+					<item>Barberij</item>
+				</string-array>
+
+				<string-array name="slogan">
+					<item>Kinderen onder 8 jaar GRATIS</item>
+					<item>Moderne kapsels voor iedereen</item>
+					<item>Kom gezellig langs</item>
+					<item>Voor een Snelle Tuneup</item>
+					<item>For all things Facial</item>
+					<item>Kom bij Fleur voor \'n nieuwe Kleur</item>
+					<item>Voor alles wat geknipt kan worden</item>
+				</string-array>
+
+				<string-array name="kapperBeschrijving">
+					<item>Dames en Herenkapper centrale ligging Utrecht.
+							Kinderen tot 8 jaar worden bij ons gratis geknipt.
+							Dus neem de kleintjes gerust mee!</item>
+					<item>Wilt u een modern kapsel? Kom bij ons! Weet u het al? Dan kan dat natuurlijk ook.</item>
+					<item>Gezellige kapper nabij Amsterdam, komt u ook?</item>
+					<item>Een kappersbezoek hoeft niet te veranderen in een dagje uit.
+							Wij staan klaar u te helpen zodat u snel verder kan met uw dag.</item>
+					<item>Knippen, wassen, verven, vlechten. Je kan het zo raar niet bedenken,
+							of wij kunnen het met uw gezichtshaar! Moet u nog even wachten,
+							neem gerust een kop koffie in onze lounch.</item>
+					<item>Bent u toe aan een nieuwe stijl? Kom gezellig bij ons binnen om te browsen of
+							om een van onze experts raad te plegen.</item>
+					<item>doet het toch niet. blablabla</item>
+				</string-array>
 
 </resources>

@@ -4,75 +4,8 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".KapperInfo">
-
-	<ImageView
-		android:id="@+id/starOff2"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="4dp"
-		android:clickable="true"
-		android:contentDescription="@string/rating_s5"
-		app:layout_constraintStart_toEndOf="@+id/starOff1"
-		app:layout_constraintTop_toBottomOf="@+id/slogan"
-		app:srcCompat="@android:drawable/btn_star_big_off" />
-
-	<ImageView
-		android:id="@+id/starOn1"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="16dp"
-		android:layout_marginLeft="16dp"
-		android:layout_marginTop="4dp"
-		android:clickable="true"
-		android:contentDescription="@string/rating_s1"
-		app:layout_constraintStart_toEndOf="@+id/kapperImg"
-		app:layout_constraintTop_toBottomOf="@+id/slogan"
-		app:srcCompat="@android:drawable/btn_star_big_on" />
-
-	<ImageView
-		android:id="@+id/starOn2"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="4dp"
-		android:clickable="true"
-		android:contentDescription="@string/rating_s2"
-		app:layout_constraintStart_toEndOf="@+id/starOn1"
-		app:layout_constraintTop_toBottomOf="@+id/slogan"
-		app:srcCompat="@android:drawable/btn_star_big_on" />
-
-	<ImageView
-		android:id="@+id/starOn3"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="4dp"
-		android:clickable="true"
-		android:contentDescription="@string/rating_s3"
-		app:layout_constraintStart_toEndOf="@+id/starOn2"
-		app:layout_constraintTop_toBottomOf="@+id/slogan"
-		app:srcCompat="@android:drawable/btn_star_big_on" />
-
-	<ImageView
-		android:id="@+id/starOff1"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="4dp"
-		android:clickable="true"
-		android:contentDescription="@string/rating_s4"
-		app:layout_constraintStart_toEndOf="@+id/starOn3"
-		app:layout_constraintTop_toBottomOf="@+id/slogan"
-		app:srcCompat="@android:drawable/btn_star_big_off" />
-
-	<TextView
-		android:id="@+id/rating"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_marginStart="16dp"
-		android:layout_marginLeft="16dp"
-		android:text="@string/kapperRating"
-		app:layout_constraintBottom_toBottomOf="@+id/starOff2"
-		app:layout_constraintStart_toEndOf="@+id/starOff2"
-		app:layout_constraintTop_toTopOf="@+id/starOff2" />
+	tools:context=".KapperInfo"
+	android:background="@color/mainBackgroundColor">
 
 	<ImageView
 		android:id="@+id/kapperImg"
@@ -81,7 +14,7 @@
 		android:layout_marginStart="8dp"
 		android:layout_marginLeft="8dp"
 		android:layout_marginTop="8dp"
-		android:contentDescription="@string/kapper_afbeelding"
+		android:contentDescription="@string/static_kapper_afbeelding"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		tools:srcCompat="@tools:sample/avatars" />
@@ -93,7 +26,8 @@
 		android:layout_marginStart="16dp"
 		android:layout_marginLeft="16dp"
 		android:layout_marginTop="4dp"
-		android:text="TextView"
+		android:text="@string/dynamic_kapperNaam"
+		android:textColor="@color/mainTextColor"
 		android:textSize="24sp"
 		android:textStyle="bold"
 		app:layout_constraintStart_toEndOf="@+id/kapperImg"
@@ -106,21 +40,94 @@
 		android:layout_marginStart="16dp"
 		android:layout_marginLeft="16dp"
 		android:layout_marginTop="4dp"
-		android:text="TextView"
+		android:text="@string/dynamic_slogan"
+		android:textColor="@color/mainTextColor"
 		android:textSize="16sp"
 		app:layout_constraintStart_toEndOf="@+id/kapperImg"
 		app:layout_constraintTop_toBottomOf="@+id/kapperNaam" />
 
+	<ImageView
+		android:id="@+id/starOn1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginLeft="16dp"
+		android:layout_marginTop="4dp"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s1"
+		app:layout_constraintStart_toEndOf="@+id/kapperImg"
+		app:layout_constraintTop_toBottomOf="@+id/slogan"
+		app:srcCompat="@android:drawable/btn_star_big_on"
+		android:focusable="true" />
+
+	<ImageView
+		android:id="@+id/starOn2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s2"
+		app:layout_constraintStart_toEndOf="@+id/starOn1"
+		app:layout_constraintTop_toTopOf="@+id/starOn1"
+		app:srcCompat="@android:drawable/btn_star_big_on"
+		android:focusable="true" />
+
+	<ImageView
+		android:id="@+id/starOn3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s3"
+		app:layout_constraintStart_toEndOf="@+id/starOn2"
+		app:layout_constraintTop_toTopOf="@+id/starOn2"
+		app:srcCompat="@android:drawable/btn_star_big_on"
+		android:focusable="true" />
+
+	<ImageView
+		android:id="@+id/starOff1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s4"
+		app:layout_constraintStart_toEndOf="@+id/starOn3"
+		app:layout_constraintTop_toTopOf="@+id/starOn3"
+		app:srcCompat="@android:drawable/btn_star_big_off"
+		android:focusable="true" />
+
+	<ImageView
+		android:id="@+id/starOff2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="true"
+		android:contentDescription="@string/rating_s5"
+		app:layout_constraintStart_toEndOf="@+id/starOff1"
+		app:layout_constraintTop_toTopOf="@+id/starOff1"
+		app:srcCompat="@android:drawable/btn_star_big_off"
+		android:focusable="true" />
+
+	<TextView
+		android:id="@+id/rating"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginLeft="16dp"
+		android:text="@string/kapperRating"
+		android:textColor="@color/mainTextColor"
+		app:layout_constraintBottom_toBottomOf="@+id/starOff2"
+		app:layout_constraintStart_toEndOf="@+id/starOff2"
+		app:layout_constraintTop_toTopOf="@+id/starOff2"
+		app:layout_constraintVertical_bias="0.538" />
+
 	<androidx.cardview.widget.CardView
-		android:id="@+id/afspraak_button"
+		android:id="@+id/Afspraak_bt"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="8dp"
 		android:clickable="true"
-		app:cardBackgroundColor="#909AD3"
+		app:cardBackgroundColor="@color/mainFieldColor"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/kapperImg">
+		app:layout_constraintTop_toBottomOf="@+id/kapperImg"
+		android:focusable="true">
 
 		<androidx.constraintlayout.widget.ConstraintLayout
 			android:layout_width="match_parent"
@@ -130,25 +137,26 @@
 				android:id="@+id/kalenderButton"
 				android:layout_width="45dp"
 				android:layout_height="45dp"
+				android:contentDescription="@string/static_kapper_afbeelding"
 				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintHorizontal_bias="0.15"
+				app:layout_constraintEnd_toStartOf="@+id/static_BeheerText"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.0"
 				app:srcCompat="@android:drawable/ic_menu_my_calendar" />
 
 			<TextView
-				android:id="@+id/static_KalenderText"
+				android:id="@+id/static_BeheerText"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:text="@string/static_AfspraakText"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
 				app:layout_constraintBottom_toBottomOf="@+id/kalenderButton"
 				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintStart_toEndOf="@+id/kalenderButton"
-				app:layout_constraintTop_toTopOf="@+id/kalenderButton"
-				app:layout_constraintVertical_bias="0.507" />
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="@+id/kalenderButton" />
 		</androidx.constraintlayout.widget.ConstraintLayout>
 	</androidx.cardview.widget.CardView>
 
@@ -157,10 +165,10 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:layout_marginTop="8dp"
-		app:layout_constraintEnd_toStartOf="@+id/afspraak_button"
+		app:layout_constraintEnd_toStartOf="@+id/Afspraak_bt"
 		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@+id/afspraak_button">
+		app:layout_constraintTop_toBottomOf="@+id/Afspraak_bt">
 
 		<androidx.constraintlayout.widget.ConstraintLayout
 			android:layout_width="match_parent"
@@ -172,9 +180,10 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:layout_marginTop="8dp"
-				android:background="#909AD3"
+				android:background="@color/mainFieldColor"
 				android:gravity="center"
 				android:text="@string/static_Beschrijving"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
 				app:layout_constraintEnd_toEndOf="parent"
@@ -182,25 +191,14 @@
 				app:layout_constraintTop_toTopOf="parent" />
 
 			<TextView
-				android:id="@+id/overOns"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="16dp"
-				android:paddingHorizontal="10sp"
-				android:text="@string/Beschrijving"
-				android:textSize="16sp"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/static_overOns" />
-
-			<TextView
 				android:id="@+id/static_TariefText"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:layout_marginTop="16dp"
-				android:background="#909AD3"
+				android:background="@color/mainFieldColor"
 				android:gravity="center"
 				android:text="@string/static_tarieflijst"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
 				app:layout_constraintEnd_toEndOf="parent"
@@ -208,14 +206,29 @@
 				app:layout_constraintTop_toBottomOf="@+id/overOns" />
 
 			<TextView
-				android:id="@+id/static_TL_Items"
+				android:id="@+id/overOns"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="16dp"
-				android:text="Behandeling"
+				android:paddingHorizontal="10sp"
+				android:text="@string/dynamicbeschrijving"
+				android:textColor="@color/mainTextColor"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/static_overOns" />
+
+			<TextView
+				android:id="@+id/Col1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="8dp"
+				android:layout_marginLeft="8dp"
+				android:layout_marginTop="16dp"
+				android:text="@string/Column1_behandeling"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
-				app:layout_constraintEnd_toStartOf="@+id/static_TL_ItemPrijs"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@+id/static_TariefText" />
 
@@ -223,49 +236,57 @@
 				android:id="@+id/static_TL_ItemPrijs"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginStart="24dp"
+				android:layout_marginLeft="24dp"
 				android:layout_marginTop="16dp"
-				android:text="Prijs"
+				android:text="@string/Column2_prijs"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
-				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/static_TL_PrijsKind"
+				app:layout_constraintHorizontal_bias="0.7"
+				app:layout_constraintStart_toEndOf="@+id/Col1"
 				app:layout_constraintTop_toBottomOf="@+id/static_TariefText" />
 
 			<TextView
 				android:id="@+id/static_TL_PrijsKind"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
+				android:layout_marginStart="16dp"
+				android:layout_marginLeft="16dp"
 				android:layout_marginTop="16dp"
-				android:text="t/m 17 jaar"
+				android:text="@string/Column3_actie"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
 				app:layout_constraintEnd_toEndOf="parent"
-				app:layout_constraintStart_toEndOf="@+id/static_TL_ItemPrijs"
+				app:layout_constraintHorizontal_bias="0.9"
+				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@+id/static_TariefText" />
 
 			<TextView
 				android:id="@+id/item1"
 				android:layout_width="wrap_content"
-				android:layout_height="36dp"
+				android:layout_height="wrap_content"
 				android:layout_marginStart="8dp"
 				android:layout_marginLeft="8dp"
 				android:layout_marginTop="8dp"
-				android:text="Knippen - Kort Kapsel"
+				android:text="@string/dynamic_item1"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@+id/static_TL_Items" />
+				app:layout_constraintTop_toBottomOf="@+id/Col1" />
 
 			<TextView
 				android:id="@+id/prijs1"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="32dp"
-				android:layout_marginLeft="32dp"
 				android:layout_marginTop="8dp"
-				android:text="€ 15,-"
+				android:text="@string/dynamic_item1_prijs1"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="@+id/static_TL_ItemPrijs"
-				app:layout_constraintStart_toEndOf="@+id/item1"
+				app:layout_constraintStart_toStartOf="@+id/static_TL_ItemPrijs"
 				app:layout_constraintTop_toBottomOf="@+id/static_TL_ItemPrijs" />
 
 			<TextView
@@ -273,7 +294,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="€ 8,-"
+				android:text="@string/dynamic_item1_prijs2"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="@+id/static_TL_PrijsKind"
 				app:layout_constraintStart_toStartOf="@+id/static_TL_PrijsKind"
@@ -284,7 +306,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="Knippen - Lang Kapsel"
+				android:text="@string/dynamic_item2"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toStartOf="@+id/prijs2"
 				app:layout_constraintHorizontal_bias="0.0"
@@ -296,7 +319,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="€ 25,-"
+				android:text="@string/dynamic_item2_prijs1"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="@+id/prijs1"
 				app:layout_constraintStart_toStartOf="@+id/prijs1"
@@ -307,7 +331,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="€ 15,-"
+				android:text="@string/dynamic_item2_prijs2"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="@+id/static_TL_PrijsKind"
 				app:layout_constraintStart_toStartOf="@+id/static_TL_PrijsKind"
@@ -318,7 +343,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="Wassen"
+				android:text="@string/dynamic_item3"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toStartOf="@+id/prijs3"
 				app:layout_constraintHorizontal_bias="0.0"
@@ -330,7 +356,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="€ 10,-"
+				android:text="@string/dynamic_item3_prijs1"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="@+id/prijs2"
 				app:layout_constraintStart_toStartOf="@+id/prijs2"
@@ -341,7 +368,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="€ 10,-"
+				android:text="@string/dynamic_item3_prijs2"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="@+id/static_TL_PrijsKind"
 				app:layout_constraintStart_toStartOf="@+id/static_TL_PrijsKind"
@@ -352,7 +380,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="Baard Knippen"
+				android:text="@string/dynamic_item4"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toStartOf="@+id/prijs4"
 				app:layout_constraintHorizontal_bias="0.0"
@@ -364,7 +393,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="€ 15,-"
+				android:text="@string/dynamic_item4_prijs1"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="@+id/prijs3"
 				app:layout_constraintStart_toStartOf="@+id/prijs3"
@@ -375,7 +405,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="Scheren"
+				android:text="@string/dynamic_item5"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toStartOf="@+id/prijs5"
 				app:layout_constraintHorizontal_bias="0.0"
@@ -387,7 +418,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="€ 25,-"
+				android:text="@string/dynamic_item5_prijs1"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="@+id/prijs4"
 				app:layout_constraintStart_toStartOf="@+id/prijs4"
@@ -398,9 +430,10 @@
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:layout_marginTop="16dp"
-				android:background="#909AD3"
+				android:background="@color/mainFieldColor"
 				android:gravity="center"
-				android:text="Openingstijden"
+				android:text="@string/static_openingstijden"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
 				app:layout_constraintEnd_toEndOf="parent"
@@ -415,7 +448,8 @@
 				android:layout_marginStart="32dp"
 				android:layout_marginLeft="32dp"
 				android:layout_marginTop="16dp"
-				android:text="Ma t/m Vr"
+				android:text="@string/dynamic_week"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
 				app:layout_constraintEnd_toEndOf="parent"
@@ -430,7 +464,8 @@
 				android:layout_marginStart="32dp"
 				android:layout_marginLeft="32dp"
 				android:layout_marginTop="8dp"
-				android:text="Vr koopavond"
+				android:text="@string/dynamic_week_extra"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
 				app:layout_constraintEnd_toEndOf="parent"
@@ -445,7 +480,8 @@
 				android:layout_marginStart="32dp"
 				android:layout_marginLeft="32dp"
 				android:layout_marginTop="8dp"
-				android:text="Za"
+				android:text="@string/dynamic_week_extra2"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
 				app:layout_constraintEnd_toEndOf="parent"
@@ -457,40 +493,45 @@
 				android:id="@+id/tijdWerkweek"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginTop="16dp"
-				android:text="0900 - 1200  |  1230 - 1730"
+				android:layout_marginBottom="2dp"
+				android:text="@string/dynamic_tijden1"
+				android:textColor="@color/mainTextColor"
+				app:layout_constraintBottom_toBottomOf="@+id/static_werkweek"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toEndOf="@+id/static_werkweek"
-				app:layout_constraintTop_toBottomOf="@+id/static_OpeningsTijden" />
+				app:layout_constraintTop_toTopOf="@+id/static_werkweek" />
 
 			<TextView
 				android:id="@+id/tijdKoopavond"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginTop="10dp"
-				android:text="1800 - 2100"
+				android:text="@string/dynamic_tijden2"
+				android:textColor="@color/mainTextColor"
+				app:layout_constraintBottom_toBottomOf="@+id/koopavond"
 				app:layout_constraintEnd_toEndOf="@+id/tijdWerkweek"
 				app:layout_constraintStart_toStartOf="@+id/tijdWerkweek"
-				app:layout_constraintTop_toBottomOf="@+id/tijdWerkweek" />
+				app:layout_constraintTop_toTopOf="@+id/koopavond" />
 
 			<TextView
 				android:id="@+id/tijdZa"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginTop="8dp"
-				android:text="Enkel op Afspraak"
+				android:text="@string/dynamic_tijden3"
+				android:textColor="@color/mainTextColor"
+				app:layout_constraintBottom_toBottomOf="@+id/za"
 				app:layout_constraintEnd_toEndOf="@+id/tijdWerkweek"
 				app:layout_constraintStart_toStartOf="@+id/tijdWerkweek"
-				app:layout_constraintTop_toBottomOf="@+id/tijdKoopavond" />
+				app:layout_constraintTop_toTopOf="@+id/za" />
 
 			<TextView
 				android:id="@+id/static_OverigeInfo"
 				android:layout_width="match_parent"
 				android:layout_height="match_parent"
 				android:layout_marginTop="16dp"
-				android:background="#909AD3"
+				android:background="@color/mainFieldColor"
 				android:gravity="center"
 				android:text="@string/static_OverigeInfo"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
 				app:layout_constraintEnd_toEndOf="parent"
@@ -503,7 +544,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="16dp"
-				android:text="LangeJanWeg 732 B, 1234AB, Utrecht"
+				android:text="@string/dynamic_address"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
@@ -514,7 +556,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="T: 0800-12 1234  |  E: dynamickapper@info.nl"
+				android:text="@string/dynamic_contact"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
@@ -525,7 +568,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="8dp"
-				android:text="KVK: 12345678 | BTW: NL12345A123B12"
+				android:text="@string/dynamic_btw"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
@@ -536,7 +580,8 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="32dp"
-				android:text="© Copyright 2020 DynamicKapper"
+				android:text="@string/static_copyright"
+				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
