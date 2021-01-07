@@ -89,55 +89,55 @@
 
 		<ImageView
 			android:id="@+id/starOn1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:layout_marginStart="16dp"
 			android:layout_marginLeft="16dp"
-			android:layout_marginTop="4dp"
+			android:layout_marginTop="3dp"
 			android:contentDescription="@string/rating_s1"
 			app:layout_constraintStart_toEndOf="@+id/kapperImg"
 			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_on" />
+			app:srcCompat="@drawable/schaar_vol_klein" />
 
 		<ImageView
 			android:id="@+id/starOn2"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:layout_marginTop="4dp"
 			android:contentDescription="@string/rating_s2"
 			app:layout_constraintStart_toEndOf="@+id/starOn1"
 			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_on" />
+			app:srcCompat="@drawable/schaar_vol_klein" />
 
 		<ImageView
 			android:id="@+id/starOn3"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:layout_marginTop="4dp"
 			android:contentDescription="@string/rating_s3"
 			app:layout_constraintStart_toEndOf="@+id/starOn2"
 			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_on" />
+			app:srcCompat="@drawable/schaar_vol_klein" />
 
 		<ImageView
 			android:id="@+id/starOff1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:layout_marginTop="4dp"
 			android:contentDescription="@string/rating_s4"
 			app:layout_constraintStart_toEndOf="@+id/starOn3"
 			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_off" />
+			app:srcCompat="@drawable/schaar_leeg_klein" />
 
 		<ImageView
 			android:id="@+id/starOff2"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:layout_marginTop="4dp"
 			android:contentDescription="@string/rating_s5"
 			app:layout_constraintStart_toEndOf="@+id/starOff1"
 			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_off" />
+			app:srcCompat="@drawable/schaar_leeg_klein" />
 
 		<TextView
 			android:id="@+id/rating"

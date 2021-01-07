@@ -11,13 +11,13 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+public class KapperAdapter extends RecyclerView.Adapter<KapperAdapter.KapperViewHolder> {
 
     String data1[], data2[];
     int images[];
     Context context;
 
-    public MyAdapter (Context ct, String s1[], String s2[], int img[]) {
+    public KapperAdapter(Context ct, String s1[], String s2[], int img[]) {
         context = ct;
         data1 = s1;
         data2 = s2;
@@ -26,14 +26,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public KapperViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.kapper_card, parent, false);
-        return new MyViewHolder(view);
+        return new KapperViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull KapperViewHolder holder, final int position) {
         holder.kapperNaam.setText(data1[position]);
         holder.slogan.setText(data2[position]);
         holder.kapperImg.setImageResource(images[position]);
@@ -56,14 +56,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return data1.length;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class KapperViewHolder extends RecyclerView.ViewHolder {
 
         TextView kapperNaam, slogan;
         ImageView kapperImg;
 
         ConstraintLayout mainLayout;
 
-        public MyViewHolder (@NonNull View itemView) {
+        public KapperViewHolder(@NonNull View itemView) {
             super(itemView);
 
             kapperNaam = itemView.findViewById(R.id.kapperNaam);

@@ -24,8 +24,8 @@ public class ZoekResultaten extends AppCompatActivity {
         s1 = getResources().getStringArray(R.array.kapperNaam);
         s2 = getResources().getStringArray(R.array.slogan);
 
-        MyAdapter myAdapter = new MyAdapter(this, s1, s2, images);
-        recyclerView.setAdapter(myAdapter);
+        KapperAdapter kapperAdapter = new KapperAdapter(this, s1, s2, images);
+        recyclerView.setAdapter(kapperAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

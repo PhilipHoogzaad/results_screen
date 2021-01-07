@@ -1,9 +1,12 @@
 
 package com.example.recyclerview;
 
-        import android.widget.ImageView;
-        import android.widget.TextView;
-        import android.widget.Toast;
+// NOTE: Alle notities zonder toevoeging zijn gemaakt zodat de opgehaalde data (nu statisch) niet afhankelijk is van
+//       De door de gebruikter geclickte kapper (en dus geen error vermeld: "NO DATA!")
+
+        //import android.widget.ImageView;
+        //import android.widget.TextView;
+        //import android.widget.Toast;
         import androidx.appcompat.app.AppCompatActivity;
         import android.os.Bundle;
 
@@ -13,12 +16,12 @@ package com.example.recyclerview;
 
 public class AfspraakBeheren extends AppCompatActivity {
 
-    ImageView kapperImg;
-    TextView kapperNaam;
-    TextView slogan;
+    //ImageView kapperImg;
+    //TextView kapperNaam;
+    //TextView slogan;
 
-    String data1, data2;
-    int myImage;
+    //String data1, data2;
+    //int myImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +29,17 @@ public class AfspraakBeheren extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afspraak_beheren);
 
-        kapperImg = findViewById(R.id.kapperImg);
-        kapperNaam = findViewById(R.id.kapperNaam);
-        slogan = findViewById(R.id.slogan);
+        //kapperImg = findViewById(R.id.kapperImg);
+        //kapperNaam = findViewById(R.id.kapperNaam);
+        //slogan = findViewById(R.id.slogan);
 
-        getData();
-        setData();
+        //getData();
+        //setData();
 
     }
+}
 
-    public void getData() {
+    /*public void getData() {
 
         if(getIntent().hasExtra("myImage") && getIntent().hasExtra("data1") && getIntent().hasExtra("data2")) {
 
@@ -57,4 +61,4 @@ public class AfspraakBeheren extends AppCompatActivity {
         kapperImg.setImageResource(myImage);
 
     }
-}
+}*/

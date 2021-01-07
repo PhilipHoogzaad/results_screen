@@ -34,94 +34,97 @@
 		app:layout_constraintTop_toBottomOf="@+id/static_MaakAfspraak">
 
 		<ImageView
-			android:id="@+id/kapperImg"
+			android:id="@+id/Img"
 			android:layout_width="100dp"
 			android:layout_height="100dp"
 			android:layout_marginStart="8dp"
 			android:layout_marginLeft="8dp"
 			android:contentDescription="@string/static_kapper_afbeelding"
+			android:src="@drawable/kapper3"
 			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toTopOf="parent"
-			tools:srcCompat="@tools:sample/avatars" />
+			app:layout_constraintTop_toTopOf="parent"/>
+			<!--Wanneer: "tools:srcCompat="@drawable/kapper3" "Niets weergeeft
+			Gebruik: "android:src="@......""-->
+
 
 		<TextView
-			android:id="@+id/kapperNaam"
+			android:id="@+id/kapperNaam2"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginStart="16dp"
 			android:layout_marginLeft="16dp"
 			android:layout_marginTop="4dp"
-			android:text="@string/dynamic_kapperNaam"
+			android:text="@string/Afspraken_kappernaam"
 			android:textColor="@color/mainTextColor"
 			android:textSize="24sp"
 			android:textStyle="bold"
-			app:layout_constraintStart_toEndOf="@+id/kapperImg"
+			app:layout_constraintStart_toEndOf="@+id/Img"
 			app:layout_constraintTop_toTopOf="parent" />
 
 		<TextView
-			android:id="@+id/slogan"
+			android:id="@+id/slogan2"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_marginStart="16dp"
 			android:layout_marginLeft="16dp"
 			android:layout_marginTop="4dp"
-			android:text="@string/dynamic_slogan"
+			android:text="@string/Afspraken_Kapper_Slogan"
 			android:textColor="@color/mainTextColor"
 			android:textSize="16sp"
-			app:layout_constraintStart_toEndOf="@+id/kapperImg"
-			app:layout_constraintTop_toBottomOf="@+id/kapperNaam" />
+			app:layout_constraintStart_toEndOf="@+id/Img"
+			app:layout_constraintTop_toBottomOf="@+id/kapperNaam2" />
 
 		<ImageView
 			android:id="@+id/starOn1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:layout_marginStart="16dp"
 			android:layout_marginLeft="16dp"
-			android:layout_marginTop="4dp"
+			android:layout_marginTop="3dp"
 			android:contentDescription="@string/rating_s1"
-			app:layout_constraintStart_toEndOf="@+id/kapperImg"
-			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_on" />
+			app:layout_constraintStart_toEndOf="@+id/Img"
+			app:layout_constraintTop_toBottomOf="@+id/slogan2"
+			app:srcCompat="@drawable/schaar_vol_klein" />
 
 		<ImageView
 			android:id="@+id/starOn2"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="4dp"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:contentDescription="@string/rating_s2"
+			app:layout_constraintBottom_toBottomOf="@+id/starOn1"
 			app:layout_constraintStart_toEndOf="@+id/starOn1"
-			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_on" />
+			app:layout_constraintTop_toTopOf="@+id/starOn1"
+			app:srcCompat="@drawable/schaar_vol_klein" />
 
 		<ImageView
 			android:id="@+id/starOn3"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="4dp"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:contentDescription="@string/rating_s3"
+			app:layout_constraintBottom_toBottomOf="@+id/starOn2"
 			app:layout_constraintStart_toEndOf="@+id/starOn2"
-			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_on" />
+			app:layout_constraintTop_toTopOf="@+id/starOn2"
+			app:srcCompat="@drawable/schaar_vol_klein" />
 
 		<ImageView
 			android:id="@+id/starOff1"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="4dp"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:contentDescription="@string/rating_s4"
+			app:layout_constraintBottom_toBottomOf="@+id/starOn3"
 			app:layout_constraintStart_toEndOf="@+id/starOn3"
-			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_off" />
+			app:layout_constraintTop_toTopOf="@+id/starOn3"
+			app:srcCompat="@drawable/schaar_leeg_klein" />
 
 		<ImageView
 			android:id="@+id/starOff2"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="4dp"
+			android:layout_width="40dp"
+			android:layout_height="40dp"
 			android:contentDescription="@string/rating_s5"
+			app:layout_constraintBottom_toBottomOf="@+id/starOff1"
 			app:layout_constraintStart_toEndOf="@+id/starOff1"
-			app:layout_constraintTop_toBottomOf="@+id/slogan"
-			app:srcCompat="@android:drawable/btn_star_big_off" />
+			app:layout_constraintTop_toTopOf="@+id/starOff1"
+			app:srcCompat="@drawable/schaar_leeg_klein" />
 
 		<TextView
 			android:id="@+id/rating"
@@ -138,6 +141,107 @@
 
 	</androidx.constraintlayout.widget.ConstraintLayout>
 
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/dynamic_info"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/Gemaakte_Afspraken">
+
+		<TextView
+			android:id="@+id/id1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/afspraak_id_1"
+			android:textColor="@color/mainTextColor"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toStartOf="@+id/d1"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+		<TextView
+			android:id="@+id/id2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:text="@string/afspraak_id_2"
+			android:textColor="@color/mainTextColor"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="@+id/id1"
+			app:layout_constraintStart_toStartOf="@+id/id1"
+			app:layout_constraintTop_toBottomOf="@+id/id1" />
+
+		<TextView
+			android:id="@+id/d1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/afspraak_dt_1"
+			android:textColor="@color/mainTextColor"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="@id/t1"
+			app:layout_constraintStart_toEndOf="@+id/id1"
+			app:layout_constraintTop_toTopOf="@+id/id1" />
+
+		<TextView
+			android:id="@+id/d2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:layout_marginBottom="8dp"
+			android:text="@string/afspraak_dt_2"
+			android:textColor="@color/mainTextColor"
+			android:textSize="16sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="@+id/d1"
+			app:layout_constraintTop_toBottomOf="@+id/d1" />
+
+		<TextView
+			android:id="@+id/t1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/afspraak_td_1"
+			android:textColor="@color/mainTextColor"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="@+id/p1"
+			app:layout_constraintStart_toEndOf="@+id/d1"
+			app:layout_constraintTop_toTopOf="@+id/d1" />
+
+		<TextView
+			android:id="@+id/t2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:text="@string/afspraak_td_2"
+			android:textColor="@color/mainTextColor"
+			android:textSize="16sp"
+			app:layout_constraintStart_toStartOf="@+id/t1"
+			app:layout_constraintTop_toBottomOf="@+id/t1" />
+
+		<TextView
+			android:id="@+id/p1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/afspraak_ps_1"
+			android:textColor="@color/mainTextColor"
+			android:textSize="16sp"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/t1"
+			app:layout_constraintTop_toTopOf="@+id/t1" />
+
+		<TextView
+			android:id="@+id/p"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="8dp"
+			android:text="@string/afspraak_ps_2"
+			android:textColor="@color/mainTextColor"
+			android:textSize="16sp"
+			app:layout_constraintStart_toStartOf="@+id/p1"
+			app:layout_constraintTop_toBottomOf="@+id/p1" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
 	<androidx.cardview.widget.CardView
 		android:id="@+id/Gemaakte_Afspraken"
 		android:layout_width="match_parent"
@@ -149,111 +253,6 @@
 		app:layout_constraintTop_toBottomOf="@+id/KapperCard">
 
 		<androidx.constraintlayout.widget.ConstraintLayout
-			android:id="@+id/dynamic_info"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_marginTop="40dp"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toTopOf="parent">
-
-			<TextView
-				android:id="@+id/id1"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="55dp"
-				android:layout_marginLeft="55dp"
-				android:text="@string/afspraak_id_1"
-				android:textColor="@color/mainTextColor"
-				android:textSize="16sp"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toTopOf="parent" />
-
-			<TextView
-				android:id="@+id/id2"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="8dp"
-				android:text="@string/afspraak_id_2"
-				android:textColor="@color/mainTextColor"
-				android:textSize="16sp"
-				app:layout_constraintEnd_toEndOf="@+id/id1"
-				app:layout_constraintStart_toStartOf="@+id/id1"
-				app:layout_constraintTop_toBottomOf="@+id/id1" />
-
-			<TextView
-				android:id="@+id/d1"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="70dp"
-				android:layout_marginLeft="70dp"
-				android:text="@string/afspraak_dt_1"
-				android:textColor="@color/mainTextColor"
-				android:textSize="16sp"
-				app:layout_constraintStart_toEndOf="@+id/id1"
-				app:layout_constraintTop_toTopOf="@+id/id1" />
-
-			<TextView
-				android:id="@+id/d2"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="8dp"
-				android:layout_marginBottom="8dp"
-				android:text="@string/afspraak_dt_2"
-				android:textColor="@color/mainTextColor"
-				android:textSize="16sp"
-				app:layout_constraintBottom_toBottomOf="parent"
-				app:layout_constraintStart_toStartOf="@+id/d1"
-				app:layout_constraintTop_toBottomOf="@+id/d1" />
-
-			<TextView
-				android:id="@+id/t1"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="30dp"
-				android:layout_marginLeft="30dp"
-				android:text="@string/afspraak_td_1"
-				android:textColor="@color/mainTextColor"
-				android:textSize="16sp"
-				app:layout_constraintStart_toEndOf="@+id/d1"
-				app:layout_constraintTop_toTopOf="@+id/d1" />
-
-			<TextView
-				android:id="@+id/t2"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="8dp"
-				android:text="@string/afspraak_td_2"
-				android:textColor="@color/mainTextColor"
-				android:textSize="16sp"
-				app:layout_constraintStart_toStartOf="@+id/t1"
-				app:layout_constraintTop_toBottomOf="@+id/t1" />
-
-			<TextView
-				android:id="@+id/p1"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginStart="60dp"
-				android:layout_marginLeft="60dp"
-				android:text="@string/afspraak_ps_1"
-				android:textColor="@color/mainTextColor"
-				android:textSize="16sp"
-				app:layout_constraintStart_toEndOf="@+id/t1"
-				app:layout_constraintTop_toTopOf="@+id/t1" />
-
-			<TextView
-				android:id="@+id/p"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginTop="8dp"
-				android:text="@string/afspraak_ps_2"
-				android:textColor="@color/mainTextColor"
-				android:textSize="16sp"
-				app:layout_constraintStart_toStartOf="@+id/p1"
-				app:layout_constraintTop_toBottomOf="@+id/p1" />
-		</androidx.constraintlayout.widget.ConstraintLayout>
-
-		<androidx.constraintlayout.widget.ConstraintLayout
 			android:id="@+id/static_info"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content">
@@ -262,8 +261,6 @@
 				android:id="@+id/static_AfNummer"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="24dp"
-				android:layout_marginLeft="24dp"
 				android:layout_marginTop="8dp"
 				android:layout_marginBottom="8dp"
 				android:text="@string/static_afspraak_column1"
@@ -272,18 +269,18 @@
 				android:textStyle="bold"
 				app:layout_constraintBottom_toBottomOf="parent"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toTopOf="parent" />
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintEnd_toStartOf="@+id/static_AfDatum"/>
 
 			<TextView
 				android:id="@+id/static_AfDatum"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="50dp"
-				android:layout_marginLeft="50dp"
 				android:text="@string/static_afspraak_column2"
 				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
+				app:layout_constraintEnd_toStartOf="@+id/static_AfTijd"
 				app:layout_constraintStart_toEndOf="@+id/static_AfNummer"
 				app:layout_constraintTop_toTopOf="@+id/static_AfNummer" />
 
@@ -291,12 +288,11 @@
 				android:id="@+id/static_AfTijd"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="50dp"
-				android:layout_marginLeft="50dp"
 				android:text="@string/static_afspraak_column3"
 				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
+				app:layout_constraintEnd_toStartOf="@+id/static_AfPers"
 				app:layout_constraintStart_toEndOf="@+id/static_AfDatum"
 				app:layout_constraintTop_toTopOf="@+id/static_AfDatum" />
 
@@ -304,12 +300,11 @@
 				android:id="@+id/static_AfPers"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginStart="32dp"
-				android:layout_marginLeft="32dp"
 				android:text="@string/static_afspraak_column4"
 				android:textColor="@color/mainTextColor"
 				android:textSize="16sp"
 				android:textStyle="bold"
+				app:layout_constraintEnd_toEndOf="parent"
 				app:layout_constraintStart_toEndOf="@+id/static_AfTijd"
 				app:layout_constraintTop_toTopOf="@+id/static_AfTijd" />
 
