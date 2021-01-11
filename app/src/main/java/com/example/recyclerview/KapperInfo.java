@@ -21,7 +21,7 @@ public class KapperInfo extends AppCompatActivity {
 
     /*
        NOTE:    Persoonlijke kapper beschrijving
-                string.xml -line 47-	string-array name="kapperBeschrijving"
+                string.xml -line 123-	string-array name="kapperBeschrijving"
                 TextView "overOns" = positie weergeving
 
        FIX: setData -> overOns.setText(s3[0]); <- "0" moet dynamisch worden naar geclickte kapper

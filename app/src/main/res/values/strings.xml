@@ -93,8 +93,10 @@
 				<string name="afspraak_td_2">11:00</string>
 				<string name="afspraak_ps_1">2</string>
 				<string name="afspraak_ps_2">2</string>
-	<string name="Afspraken_kappernaam">Snip Snip</string>
-	<string name="Afspraken_Kapper_Slogan">Kom gezellig langs</string>
+
+		<!-- Afspraken Beheren Placeholders -->
+				<string name="Afspraken_kappernaam">Snip Snip</string>
+				<string name="Afspraken_Kapper_Slogan">Kom gezellig langs</string>
 
 
 	<!-- DYNAMIC STRING ARRAYS -->
