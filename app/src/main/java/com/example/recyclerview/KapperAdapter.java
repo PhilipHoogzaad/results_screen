@@ -13,14 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class KapperAdapter extends RecyclerView.Adapter<KapperAdapter.KapperViewHolder> {
 
-    String data1[], data2[];
+    String data1[], data2[], data3[];
     int images[];
     Context context;
 
-    public KapperAdapter(Context ct, String s1[], String s2[], int img[]) {
+    public KapperAdapter(Context ct, String s1[], String s2[], String s3[], int img[]) {
         context = ct;
         data1 = s1;
         data2 = s2;
+        data3 = s3;
         images = img;
     }
 
@@ -41,11 +42,12 @@ public class KapperAdapter extends RecyclerView.Adapter<KapperAdapter.KapperView
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //int i = v.getId();
+
                 Intent intent = new Intent (context, KapperInfo.class);
                 intent.putExtra("data1", data1[position]);
                 intent.putExtra("data2", data2[position]);
                 intent.putExtra("myImage", images[position]);
+                intent.putExtra("overOnstxt", data3[position]);
                 context.startActivity(intent);
             }
         });

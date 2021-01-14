@@ -11,7 +11,7 @@ public class ZoekResultaten extends AppCompatActivity {
 
     RecyclerView recyclerView;
 
-    String[] s1, s2;
+    String[] s1, s2, s3;
     int[] images = {R.drawable.kapper1, R.drawable.kapper2, R.drawable.kapper3, R.drawable.kapper4, R.drawable.kapper5, R.drawable.kapper6, R.drawable.kapper7};
 
     @Override
@@ -23,8 +23,9 @@ public class ZoekResultaten extends AppCompatActivity {
 
         s1 = getResources().getStringArray(R.array.kapperNaam);
         s2 = getResources().getStringArray(R.array.slogan);
+        s3 = getResources().getStringArray(R.array.kapperBeschrijving);
 
-        KapperAdapter kapperAdapter = new KapperAdapter(this, s1, s2, images);
+        KapperAdapter kapperAdapter = new KapperAdapter(this, s1, s2, s3, images);
         recyclerView.setAdapter(kapperAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
