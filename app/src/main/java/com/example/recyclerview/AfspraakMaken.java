@@ -10,8 +10,11 @@ import android.os.Bundle;
 import androidx.cardview.widget.CardView;
 
 
-// FIX: data1, data2, myImage = "No Data!"
-
+/*
+    FIX:
+        Kapper selectie wordt niet opgeslagen vanuit "KapperInfo.java"
+        Navigatie terug resulteerd in "No Data!" -line 63-
+ */
 
 public class AfspraakMaken extends AppCompatActivity {
 
@@ -22,6 +25,7 @@ public class AfspraakMaken extends AppCompatActivity {
     String data1, data2;
     int myImage;
     public CardView AfspraakBeheerButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,7 @@ public class AfspraakMaken extends AppCompatActivity {
         setData();
     }
 
+
     private void getData() {
 
         if(getIntent().hasExtra("myImage") && getIntent().hasExtra("data1") && getIntent().hasExtra("data2")) {
@@ -58,15 +63,14 @@ public class AfspraakMaken extends AppCompatActivity {
         } else {
 
             Toast.makeText(this, "No Data!", Toast.LENGTH_SHORT).show();
-
         }
     }
+
 
     private void setData() {
 
         kapperNaam.setText(data1);
         slogan.setText(data2);
         kapperImg.setImageResource(myImage);
-
     }
 }

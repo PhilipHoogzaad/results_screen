@@ -17,15 +17,18 @@ public class KapperInfo extends AppCompatActivity {
     TextView slogan;
     TextView overOns;
 
-    /*
-       FIX: class: AfspraakMaken = data1, data2, myImage: "No Data!"
-     */
+
+/*
+    FIX:
+        Kapper profiel wordt niet opgeslagen!
+        Indien navigatie terug, resulteerd in "No Data!" Toast
+*/
 
 
     String data1, data2, overOnstxt;
     int myImage;
-
     public CardView AfspraakButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,23 +44,25 @@ public class KapperInfo extends AppCompatActivity {
         AfspraakButton = findViewById(R.id.Afspraak_bt);
         AfspraakButton.setOnClickListener(new View.OnClickListener() {
 
-            /*
-            NOTE:   This is a Nested Activity, not well orginized when dealing with multiple buttons,
-                    then use a switch instead: see below
-             */
+        /*
+            NOTE:
+                This is a Nested Activity
+                not well orginized when dealing with multiple buttons,
+                then use a switch instead (switch -> break)
+        */
 
             @Override
             public void onClick(View v) {
 
                 startActivity(new Intent(KapperInfo.this,
                         AfspraakMaken.class));
-
             }
         });
 
         getData();
         setData();
     }
+
 
     public void getData() {
 
@@ -69,14 +74,12 @@ public class KapperInfo extends AppCompatActivity {
             myImage = getIntent().getIntExtra("myImage", 1);
             overOnstxt = getIntent().getStringExtra("overOnstxt");
 
-
-
         } else {
 
             Toast.makeText(this, "No Data!", Toast.LENGTH_SHORT).show();
-
         }
     }
+
 
     private void setData() {
 
@@ -84,6 +87,5 @@ public class KapperInfo extends AppCompatActivity {
         slogan.setText(data2);
         kapperImg.setImageResource(myImage);
         overOns.setText(overOnstxt);
-
     }
 }

@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 public class KapperAdapter extends RecyclerView.Adapter<KapperAdapter.KapperViewHolder> {
 
     String data1[], data2[], data3[];
@@ -18,6 +19,7 @@ public class KapperAdapter extends RecyclerView.Adapter<KapperAdapter.KapperView
     Context context;
 
     public KapperAdapter(Context ct, String s1[], String s2[], String s3[], int img[]) {
+
         context = ct;
         data1 = s1;
         data2 = s2;
@@ -25,20 +27,25 @@ public class KapperAdapter extends RecyclerView.Adapter<KapperAdapter.KapperView
         images = img;
     }
 
+
     @NonNull
     @Override
     public KapperViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.kapper_card, parent, false);
         return new KapperViewHolder(view);
     }
 
+
     @Override
     public void onBindViewHolder(@NonNull KapperViewHolder holder, final int position) {
+
         holder.kapperNaam.setText(data1[position]);
         holder.slogan.setText(data2[position]);
         holder.kapperImg.setImageResource(images[position]);
 
+        // Kapper ID Kaart functie
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,14 +62,15 @@ public class KapperAdapter extends RecyclerView.Adapter<KapperAdapter.KapperView
 
     @Override
     public int getItemCount() {
+
         return data1.length;
     }
+
 
     public class KapperViewHolder extends RecyclerView.ViewHolder {
 
         TextView kapperNaam, slogan;
         ImageView kapperImg;
-
         ConstraintLayout mainLayout;
 
         public KapperViewHolder(@NonNull View itemView) {
@@ -71,7 +79,6 @@ public class KapperAdapter extends RecyclerView.Adapter<KapperAdapter.KapperView
             kapperNaam = itemView.findViewById(R.id.kapperNaam);
             slogan = itemView.findViewById(R.id.slogan);
             kapperImg = itemView.findViewById(R.id.kapperImg);
-
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }
